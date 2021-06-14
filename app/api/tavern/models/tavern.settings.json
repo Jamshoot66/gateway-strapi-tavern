@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "taverns",
+  "info": {
+    "name": "tavern"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    }
+  }
+}

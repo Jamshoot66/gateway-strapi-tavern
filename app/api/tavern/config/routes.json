@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/taverns",
+      "handler": "tavern.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/taverns/count",
+      "handler": "tavern.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/taverns/:id",
+      "handler": "tavern.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/taverns",
+      "handler": "tavern.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/taverns/:id",
+      "handler": "tavern.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/taverns/:id",
+      "handler": "tavern.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
