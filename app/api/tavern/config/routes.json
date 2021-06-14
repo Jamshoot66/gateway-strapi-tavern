@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/tavern",
+      "handler": "tavern.randomTavern",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/taverns",
       "handler": "tavern.find",
       "config": {

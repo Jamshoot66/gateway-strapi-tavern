@@ -5,4 +5,16 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  randomTavern: async (ctx) => {
+    const tavernRaw = await strapi.models.tavern
+      .query((qb) =>
+        qb.select('*')
+          .orderByRaw('RANDOM()')
+          .limit(1)
+      )
+      .fetchAll();
+
+    return tavernRaw.toJSON();
+  }
+};
