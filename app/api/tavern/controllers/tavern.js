@@ -9,7 +9,9 @@ module.exports = {
   randomTavern: async (ctx) => {
     const tavernRaw = await strapi.models.tavern
       .query((qb) =>
-        qb.select('*')
+        qb
+          .select(['id', 'title', 'description', 'longitude', 'latitude'])
+          .where('is_active', '=', true)
           .orderByRaw('RANDOM()')
           .limit(1)
       )
