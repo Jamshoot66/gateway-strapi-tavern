@@ -17,6 +17,6 @@ module.exports = {
       )
       .fetchAll();
 
-    return tavernRaw.toJSON();
+    return tavernRaw.toJSON()[0];
   }
 };
